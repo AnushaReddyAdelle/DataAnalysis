@@ -1,0 +1,294 @@
+User@User-PC MINGW64 ~/Desktop/temp (master)
+$ pwd
+/c/Users/User/Desktop/temp
+
+User@User-PC MINGW64 ~/Desktop/temp (master)
+$
+
+User@User-PC MINGW64 ~/Desktop/temp (master)
+$ ls
+Hello.txt
+
+User@User-PC MINGW64 ~/Desktop/temp (master)
+$ git init
+Initialized empty Git repository in C:/Users/User/Desktop/temp/.git/
+
+User@User-PC MINGW64 ~/Desktop/temp (master)
+$ git clone https://github.com/AnushaReddyAdelle/DataAnalysis.git
+Cloning into 'DataAnalysis'...
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+
+User@User-PC MINGW64 ~/Desktop/temp (master)
+$ ls
+DataAnalysis/  Hello.txt
+
+User@User-PC MINGW64 ~/Desktop/temp (master)
+$ cd DataAnalysis/
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (master)
+$ ls
+File01.txt  File02.txt  README.md
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (master)
+$ pwd
+/c/Users/User/Desktop/temp/DataAnalysis
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (master)
+$ ls
+File01.txt  File02.txt  README.md
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (master)
+$ cd ..
+
+User@User-PC MINGW64 ~/Desktop/temp (master)
+$ ls
+DataAnalysis/  Hello.txt
+
+User@User-PC MINGW64 ~/Desktop/temp (master)
+$ mv Hello.txt DataAnalysis
+
+User@User-PC MINGW64 ~/Desktop/temp (master)
+$ ls
+DataAnalysis/
+
+User@User-PC MINGW64 ~/Desktop/temp (master)
+$ pwd
+/c/Users/User/Desktop/temp
+
+User@User-PC MINGW64 ~/Desktop/temp (master)
+$ ls
+DataAnalysis/
+
+User@User-PC MINGW64 ~/Desktop/temp (master)
+$ cd DataAnalysis
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (master)
+$ ls
+File01.txt  File02.txt  Hello.txt  README.md
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Hello.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (master)
+$ git add Hello.txt
+warning: LF will be replaced by CRLF in Hello.txt.
+The file will have its original line endings in your working directory.
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   Hello.txt
+
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (master)
+$ git commit -m "Hello.txt"
+[master 9f10059] Hello.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Hello.txt
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (master)
+$ ls
+File01.txt  File02.txt  Hello.txt  README.md
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (master)
+$ git push origin master
+Username for 'https://github.com': AnushaReddyAdelle
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 332 bytes | 110.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/AnushaReddyAdelle/DataAnalysis.git
+   3f6318d..9f10059  master -> master
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (master)
+$
+
+===================================================================================================================
+
+$ clear
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (master)
+$ git checkout -b Level1
+Switched to a new branch 'Level1'
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (Level1)
+$ git status
+On branch Level1
+nothing to commit, working tree clean
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (Level1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (master)
+$ git checkout -b Level1
+fatal: A branch named 'Level1' already exists.
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (master)
+$ git checkout Level1
+Switched to branch 'Level1'
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (Level1)
+
+===================================================================================================================
+
+
+User@User-PC MINGW64 ~/Desktop/temp (master)
+$ ls
+DataAnalysis/
+
+User@User-PC MINGW64 ~/Desktop/temp (master)
+$ cd ..
+
+User@User-PC MINGW64 ~/Desktop (master)
+$ cd temp/
+
+User@User-PC MINGW64 ~/Desktop/temp (master)
+$ ls
+DataAnalysis/
+
+User@User-PC MINGW64 ~/Desktop/temp (master)
+$ git checkout Level1
+error: pathspec 'Level1' did not match any file(s) known to git.
+
+User@User-PC MINGW64 ~/Desktop/temp (master)
+$ cd DataAnalysis/
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (Level1)
+$ ls
+File01.txt  File02.txt  Hello.txt  README.md
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (Level1)
+$ vi File03.txt
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (Level1)
+$ git status
+On branch Level1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        File03.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (Level1)
+$ git add File03.txt
+warning: LF will be replaced by CRLF in File03.txt.
+The file will have its original line endings in your working directory.
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (Level1)
+$ git status
+On branch Level1
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   File03.txt
+
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (Level1)
+$ git commit -m "File03.txt"
+[Level1 1d659b8] File03.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 File03.txt
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (Level1)
+$ git status
+On branch Level1
+nothing to commit, working tree clean
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (Level1)
+$ git push File03.txt
+fatal: Invalid gitfile format: File03.txt
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (Level1)
+$ git push origin Level1
+Username for 'https://github.com': AnushaReddyAdelle
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/AnushaReddyAdelle/DataAnalysis.git/'
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (Level1)
+$
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (Level1)
+$ git push origin Level1
+Username for 'https://github.com': AnushaReddyAdelle
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 289 bytes | 96.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/AnushaReddyAdelle/DataAnalysis.git
+ * [new branch]      Level1 -> Level1
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (Level1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (master)
+$ git merge Level1
+Updating 9f10059..1d659b8
+Fast-forward
+ File03.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 File03.txt
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (master)
+$ git push origin master
+Username for 'https://github.com': AnushaReddyAdelle
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/AnushaReddyAdelle/DataAnalysis.git
+   9f10059..1d659b8  master -> master
+
+User@User-PC MINGW64 ~/Desktop/temp/DataAnalysis (master)
+$
+
+
+
